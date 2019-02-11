@@ -27,7 +27,7 @@ def get_smallest_bar(bar_list):
 def get_distance_to_bar(bar, longitude, latitude):
     x_diff = (longitude-bar["geometry"]["coordinates"][0])*km_in_longtitude
     y_diff = (latitude-bar["geometry"]["coordinates"][1])*km_in_latitude
-    return (math.sqrt((x_diff**2)+(y_diff**2)))
+    return math.sqrt((x_diff**2)+(y_diff**2))
 
 
 def get_closest_bar(bar_list, longitude, latitude):
